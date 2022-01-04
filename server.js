@@ -7,7 +7,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const jwt = require('_helpers/jwt');
 const errorHandler = require('_helpers/error-handler');
-const model = require('./products/image.model');
+const model = require(path.join(__dirname,'/products/image.model'));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -17,12 +17,12 @@ app.use(cors());
 app.use(jwt());
 
 // api routes
-app.use('/users', require('./users/users.controller'));
-app.use('/products', require('./products/product.controller'));
-app.use('/category', require('./category/category.controller'));
-app.use('/events', require('./events/event.controller'));
-app.use('/reviews', require('./reviews/review.controller'));
-app.use('/orders', require('./Orders/order.controller'));
+app.use('/users', require(path.join(__dirname,'/users/users.controller')));
+app.use('/products', require(path.join(__dirname,'/products/product.controller')));
+app.use('/category', require(path.join(__dirname,'/category/category.controller')));
+app.use('/events', require(path.join(__dirname,'/events/event.controller')));
+app.use('/reviews', require(path.join(__dirname,'/reviews/review.controller')));
+app.use('/orders', require(path.join(__dirname,'/Orders/order.controller')));
 
 // global error handler
 app.use(errorHandler);
