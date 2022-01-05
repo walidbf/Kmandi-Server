@@ -14,7 +14,7 @@ const productSchema = new Schema({
     },
     image: {
         type:String, 
-        default: 'uploads\1637518712089-720371059-cappucin.jpg'
+        default: 'uploads\\1637518712089-720371059-cappucin.jpg'
     },
     description: { type: String ,required: true},
     reviews: [{ type: Schema.Types.ObjectId, ref: 'Review' }]  ,
