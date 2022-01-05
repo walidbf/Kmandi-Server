@@ -8,7 +8,7 @@ const orderSchema = new Schema({
         required: true
     },
     user: {type: Schema.Types.ObjectId, ref: 'User'},
-    products: [{ type: Schema.Types.ObjectId, ref: 'Product' }] ,
+    products: String ,
     isDelivery: {type: Boolean, default: false},
     isCompleted : {type: Boolean, default: false},
     address: String,
