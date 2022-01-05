@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const productService = require('./product.service');
-const upload = require('../middelware/multerconfig');
-const Product = require('./product.model');
+const path = require('path');
+const productService = require(path.join(__dirname,'product.service'));
+const upload = require(path.join(__dirname,'../middelware/multerconfig'));
+const Product = require(path.join(__dirname,'product.model'));
 
 // routes
 router.post('/add', addProduct);

@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const eventService = require('./event.service');
+const path = require('path');
+const eventService = require(path.join(__dirname,'event.service'));
 
 
 // routes

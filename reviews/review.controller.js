@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const reviewService = require('./review.services');
+const path = require('path');
+const reviewService = require(path.join(__dirname,'/review.services'));
 
 
 // routes

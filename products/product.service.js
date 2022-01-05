@@ -1,6 +1,7 @@
-const Product = require('../products/product.model');
-const Review = require('../reviews/review.model')
-const { populate } = require('./image.model');
+const path = require('path')
+const Product = require(path.join(__dirname,'product.model'));
+const Review = require(path.join(__dirname,'../reviews/review.model'))
+const { populate } = require(path.join(__dirname,'image.model'))
 
 module.exports = {
     getAllProd,

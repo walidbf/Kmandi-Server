@@ -1,4 +1,5 @@
-const Order = require('../orders/order.model');
+const path = require('path')
+const Order = require(path.join(__dirname,'../orders/order.model'));
 
 module.exports = {
     getAllOrders,

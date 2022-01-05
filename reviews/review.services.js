@@ -1,4 +1,5 @@
-const Review = require('../reviews/review.model')
+const path = require('path')
+const Review = require(path.join(__dirname,'review.model'))
 
 module.exports = {
     getAllReview,

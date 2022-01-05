@@ -1,4 +1,6 @@
-const Category = require('../category/category.model')
+const path = require('path')
+const Category = require(path.join(__dirname,'../category/category.model'))
+
 
 module.exports = {
     getAllCat,

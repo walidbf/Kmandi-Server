@@ -1,6 +1,7 @@
 ﻿const express = require('express');
+const path = require('path');
 const router = express.Router();
-const userService = require('./user.service');
+const userService = require(path.join(__dirname,'/user.service'));
 
 
 // routes

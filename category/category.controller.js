@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const categoryService = require('./category.services');
+const path = require('path')
+const categoryService = require(path.join(__dirname,'category.services'));
 
 
 // routes

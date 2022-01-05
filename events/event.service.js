@@ -1,4 +1,5 @@
-const Event = require('../events/event.model')
+const path = require('path')
+const Event = require(path.join(__dirname,'../events/event.model'))
 
 module.exports = {
     getAllEvent,

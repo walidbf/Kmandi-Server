@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const orderService = require('./order.service');
+const path = require('path');
+const orderService = require(path.join(__dirname,'/order.service'));
 
 // routes
 router.post('/add', addorder);
